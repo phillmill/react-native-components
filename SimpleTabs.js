@@ -132,7 +132,7 @@ export default class SimpleTabs extends React.Component {
             return (
               <View 
                 key={index}
-                // Using scale to hide inactive tabs here because display: none doesn't high some elements (ie. Slider)
+                // Using scale to hide inactive tabs here because display: none doesn't hide some elements (ie. Slider)
                 style={[!thisTabActive ? {position: 'absolute', top: SCREEN_HEIGHT} : {}, styles.tabContent]}
               >
                 {child}
