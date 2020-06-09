@@ -36,7 +36,7 @@ export default class ColourPanner extends Component {
       selectedHex: '#ffffff'
     }
 
-    // Dynamic colour item size based on device height b
+    // Dynamic colour item size based on device height
     this.defaultOptionStyle = {
       width: 32, 
       height: 50
