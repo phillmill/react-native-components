@@ -1,5 +1,45 @@
+/*
+
+This component provides a simple Tab Navigation without animations.
+  - Everything that is nested inside of the Tab(s) will be what is display as the "tab content"
+  - The 'title' of the the Tab will be the actual tab button itself that you tap/touch to access the content
+
+Example Usage:
+
+<SimpleTabs tabHeight={38}>
+  <Tab title="Color">
+    <ColourPanner 
+      onColourSelect={
+        (hex) => {
+          this.props.onColourSelect(hex);
+        }
+      }
+    />
+  </Tab>
+  <Tab title="Width">
+    <View>
+      <Slider 
+        minimumValue={0}
+        maximumValue={1000}
+        step={1}
+        minimumTrackTintColor={'#35a6ff'}
+        maximumTrackTintColor={'#484A52'}
+        thumbTintColor={'#FFFFFF'}
+        onValueChange={(width) => {
+          this.props.onWidthChange(width);
+        }}
+        onSlidingComplete={(width) => {
+          this.props.onWidthChangeComplete(width);
+        }}
+      />
+    </View>
+  </Tab>
+</SimpleTabs>
+
+*/
+
 import React from 'react';
-import { View, Animated, TouchableWithoutFeedback, Text, Image, StyleSheet, Dimensions } from 'react-native';
+import { View, Animated, TouchableWithoutFeedback, Text, StyleSheet, Dimensions } from 'react-native';
 
 const SCREEN_HEIGHT = Dimensions.get('screen').height;
 
